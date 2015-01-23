@@ -10,6 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var brandLabel: UILabel!
+    @IBOutlet var colorLabel: UILabel!
+    @IBOutlet var topSpeed: UILabel!
+    
+    @IBAction func honkButton(sender: AnyObject) {
+        var myCar = Ferrari()
+        
+        brandLabel.text = myCar.brand
+        colorLabel.text = myCar.color
+        topSpeed.text = myCar.topSpeed
+        
+        myCar.honk()
+        
+        
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
